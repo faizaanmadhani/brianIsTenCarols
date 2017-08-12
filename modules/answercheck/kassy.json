@@ -1,0 +1,7 @@
+﻿{
+  "name": "answercheck",
+  "version": 1.1,
+  "startup": "answercheck.js",
+  "command": "a",
+  "help": [["/a {answer to question}", "Allows you to answer questions!"]]
+}

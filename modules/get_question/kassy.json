@@ -1,0 +1,7 @@
+{
+  "name": "get_question",
+  "version": 1.1,
+  "startup": "get_question.js",
+  "command": "get_question",
+  "help": [["{{commandPrefix}}get_question {word}", "Gets a question"]]
+}
