@@ -1,4 +1,5 @@
 var request = require('request');
+var getans = require('concierge/getanswer')
 var i = 0;
 var indexes = {};
 function get_type(S){
@@ -17,12 +18,12 @@ exports.run = function(api, event) {
     var category = array[1]
     var difficulty = array[2]
     var word = array.join(" ");
-    
+
     difficulty = difficulty.toLowerCase();
     if (difficulty != "hard" && difficulty != "medium" && difficulty != "easy"){
       difficulty = "";
     }
-  
+
     request.get('https://opentdb.com/api.php?amount=1&category=' + get_type(category) + '&difficulty=' + difficulty, (err, response, body) => {
         body = JSON.parse(body);
 
