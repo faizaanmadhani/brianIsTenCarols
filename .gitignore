@@ -6,10 +6,6 @@ nohup.out
 .ntvs_analysis.dat
 *.sln
 *.njsproj*
-<<<<<<< HEAD
-modules/*
-=======
->>>>>>> eec38ef9531cf1359646bcdb48d3e9a3fb1e2104
 typings/
 tsd.json
 *.vs*
@@ -18,8 +14,4 @@ obj/*
 .DS_Store
 WE-Palette.css
 defaults.json
-<<<<<<< HEAD
 npm-debug.log.*
-=======
-npm-debug.log.*
->>>>>>> eec38ef9531cf1359646bcdb48d3e9a3fb1e2104

@@ -1,7 +1,5 @@
 var request = require('request');
-var getans = require('concierge/getanswer')
-var i = 0;
-var indexes = {};
+var fs = require('fs');
 function get_type(S){
 	if (S.toLowerCase() === "any category") return "";
   var types = ["", "", "", "", "", "", "", "", "", "General Knowledge", "EBooks", "Film", "Music", "Musicals & Theatres", "Television", "Video Games", "Board Games", "Science & Nature", "Computers", "Mathematics", "Mythology", "Sports", "Geography", "History", "Politics", "Art", "Celebrities", "Animals", "Vehicles", "Comics", "Gadgets", "Japanese Anime & Manga", "Cartoon & Animations"];
@@ -14,7 +12,6 @@ function get_type(S){
 }
 exports.run = function(api, event) {
     var array = event.body.split(" ");
-    api.sendMessage(array, event.thread_id);
     var category = array[1]
     var difficulty = array[2]
     var word = array.join(" ");
@@ -26,7 +23,16 @@ exports.run = function(api, event) {
 
     request.get('https://opentdb.com/api.php?amount=1&category=' + get_type(category) + '&difficulty=' + difficulty, (err, response, body) => {
         body = JSON.parse(body);
-
-        api.sendMessage(body.results[0].question, event.thread_id);
+        fs.writeFile("modules/trivia/answers.txt", body.results[0].correct_answer, function(err) {
+            if(err) {
+                return console.log(err);
+            }
+        });
+        if (body.results[0].type == "boolean"){
+            api.sendMessage(body.results[0].question + " (True or False)", event.thread_id);
+        }
+        else{
+            api.sendMessage(body.results[0].question, event.thread_id);
+        }
     });
 };
