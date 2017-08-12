@@ -6,7 +6,6 @@ nohup.out
 .ntvs_analysis.dat
 *.sln
 *.njsproj*
-modules/*
 typings/
 tsd.json
 *.vs*
