@@ -2,6 +2,6 @@
   "name": "trivia",
   "version": 1.1,
   "startup": "trivia.js",
-  "command": "trivia",
-  "help": [["{{commandPrefix}}trivia {word}", "Asks you a trivia question!"]]
+  "command": "t",
+  "help": ["{{commandPrefix}}t {category} {difficulty}", "Difficulty options are 'easy', 'medium' and 'hard.' Possible categories are; 'General', 'Books', 'Film', 'Music', 'Theatre', 'Television', 'Video-Games', 'Board-Games', 'Science', 'Computers', 'Mathematics', 'Mythology', 'Sports', 'Geography', 'History', 'Politics', 'Art', 'Celebrities', 'Animals', 'Vehicles', 'Comics', 'Gadgets', 'Weeaboo', 'Cartoon'"]
 }

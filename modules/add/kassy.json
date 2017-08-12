@@ -1,0 +1,9 @@
+{
+	"name": "add",
+	"version": 1.0,
+	"startup": "add.js",
+	"command": "add",
+	"help": [
+		["{{commandPrefix}}add {question}; {answer}", "Use this module to add your own questions!"]
+	]
+}

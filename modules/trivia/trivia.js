@@ -2,7 +2,7 @@ var request = require('request');
 var fs = require('fs');
 function get_type(S){
 	if (S.toLowerCase() === "any category") return "";
-  var types = ["", "", "", "", "", "", "", "", "", "General Knowledge", "Books", "Film", "Music", "Musicals & Theatres", "Television", "Video Games", "Board Games", "Science & Nature", "Computers", "Mathematics", "Mythology", "Sports", "Geography", "History", "Politics", "Art", "Celebrities", "Animals", "Vehicles", "Comics", "Gadgets", "Japanese Anime & Manga", "Cartoon & Animations"];
+  var types = ["", "", "", "", "", "", "", "", "", "General", "Books", "Film", "Music", "Theatre", "Television", "Video-Games", "Board-Games", "Science", "Computers", "Mathematics", "Mythology", "Sports", "Geography", "History", "Politics", "Art", "Celebrities", "Animals", "Vehicles", "Comics", "Gadgets", "Weeaboo", "Cartoon"];
 	for (var l = 0; l < 33; ++l){
 		if (S.toLowerCase() == types[l].toLowerCase()){
 			return l;
@@ -11,7 +11,7 @@ function get_type(S){
   return "";
 }
 exports.run = function(api, event) {
-    var array = event.body.split(" ");
+    var array = evegnt.body.split(" ");
     var category = array[1]
     var difficulty = array[2]
     var word = array.join(" ");
