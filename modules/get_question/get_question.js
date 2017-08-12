@@ -8,10 +8,20 @@ exports.run = function(api, event) {
     weight = min(1, max(0, array[1]));
   }
   
-  if (Math.random() <= weight && fs.existsSync('./' + event.sender_id + '_cnt.txt')){
+  if (Math.random() < weight && fs.exists(event.sender_id + '.json')){
     //read from personal database 
-    
-    api.sendMessage(fs.readFile('./' + event.sender_id + '_cnt.txt'), event.thread_id);
+    var s = fs.readFile(event.sender_id +'.json', 'utf8', function (err,data) {
+      if (err) {
+        return api.sendMessage(err, event.thread_id);
+      }
+    });
+    //s = s.substr(0, s.length() - 1);
+    s = s + ']';
+    api.sendMessage(event.sender_id +'.json', event.thread_id);
+    api.sendMessage(s, event.thread_id);
+    //var brray = JSON.parse(s);
+    /*var i = Math.random() * (brray.length() - 1);
+    api.sendMessage(brray[i].q, event.thread_id);*/
   } else {
     //get trivia DB question 
     request.get('https://opentdb.com/api.php?amount=1', (err, response, body) => {

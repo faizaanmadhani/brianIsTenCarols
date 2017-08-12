@@ -23,20 +23,17 @@ exports.run = function(api, event) {
 
     var kailas = new Nogal(event.sender_id, question, answer);
 
-    var jsonData = JSON.stringify(kailas);
+    var jsonData = JSON.stringify(kailas) + ", ";
 
 
-    if (fs.existsSync('./' + event.sender_id + '.json')) {
-      fs.appendFile('./' + event.sender_id + '.json', jsonData, function (err) {
+    if (fs.existsSync(event.sender_id + '.json')) {
+      fs.appendFile(event.sender_id + '.json', jsonData, function (err) {
         if (err) throw err;
       });
-      //count = fs.readFile('./' + event.sender_id + '.cnt.json');
-      //count.parseInt;
-      //fs.writeFile('./' + event.sender_id + '.cnt.json', count + 1, 'utf8');
     }
     else {
-      fs.writeFile('./' + event.sender_id + '.json', jsonData);
-      fs.writeFile('./' + event.sender_id + '_cnt.txt', '1');
+      jsonData = '[' + jsonData;
+      fs.writeFile(event.sender_id + '.json', jsonData, 'utf8');
     }
 
     api.sendMessage("Saved! We'll be asking this soon!", event.thread_id);
