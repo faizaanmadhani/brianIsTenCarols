@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Concierge
 [![Build Status](https://api.travis-ci.org/concierge/Concierge.svg?branch=master)](https://travis-ci.org/concierge/Concierge) [![Build status](https://ci.appveyor.com/api/projects/status/eis48if0bf8ynq69?svg=true)](https://ci.appveyor.com/project/mrkno/concierge)
 
@@ -119,3 +120,6 @@ Contributions welcome, see [Contributing](.github/CONTRIBUTING.md).
 
 ## Copyright and License
 Licensed under the MIT license. Unless otherwise specified, code is Copyright (c) Matthew Knox 2017.
+=======
+# Hi
+>>>>>>> eec38ef9531cf1359646bcdb48d3e9a3fb1e2104

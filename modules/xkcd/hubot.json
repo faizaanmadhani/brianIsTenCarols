@@ -1,0 +1,26 @@
+{
+    "name": "xkcd",
+    "startup": "xkcd.coffee",
+    "version": 1,
+    "dependencies": [],
+    "configuration": [],
+    "authors": [
+        "twe4ked",
+        "Hemanth (fixed the max issue)"
+    ],
+    "help": [
+        [
+            "{{commandPrefix}}xkcd [latest]",
+            "The latest XKCD comic"
+        ],
+        [
+            "{{commandPrefix}}xkcd <num>",
+            "XKCD comic <num>"
+        ],
+        [
+            "{{commandPrefix}}xkcd random",
+            "XKCD comic <num>"
+        ]
+    ],
+    "priority": "normal"
+}

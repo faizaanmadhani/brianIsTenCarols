@@ -1,0 +1,8 @@
+{
+  "name": "reddit",
+  "version": 1.0,
+  "startup": "reddit.js",
+  "help": [
+    [ "r/ <query>", "Gives you a gr8 reddit post from sub reddit" ]
+  ]
+}

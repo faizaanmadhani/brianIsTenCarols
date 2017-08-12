@@ -1,7 +1,7 @@
 {
-  "name": "concierge-bot",
-  "version": "5.0.1",
-  "description": "Extensible general purpose chat bot.",
+  "name": "brian-is-ten-carols-bot",
+  "version": "4.2.0.6.9",
+  "description": "Your educational friends. ",
   "main": "main.js",
   "dependencies": {
     "babel-plugin-transform-strict-mode": "^6.3.13",
@@ -9,10 +9,20 @@
     "babel-preset-env": "^1.5.1",
     "babel-register": "^6.3.13",
     "babylon": "^6.8.0",
+    "basic-auth": "^1.1.0",
+    "cline": "^0.8.2",
     "coffee-script": "^1.10.0",
     "colors": "^1.1.2",
+    "express": "^4.15.4",
     "figlet": "^1.1.1",
+    "fs-extra": "^4.0.1",
+    "redwrap": "0.0.4",
+    "request": "^2.81.0",
+    "sanitize-filename": "^1.6.1",
     "scoped-http-client": "^0.11.0",
+    "sha512": "0.0.1",
+    "socket.io": "^2.0.3",
+    "tmp": "0.0.31",
     "winston": "^2.3.1"
   },
   "devDependencies": {
@@ -32,15 +42,5 @@
   },
   "bin": {
     "concierge": "./main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/concierge/Concierge.git"
-  },
-  "author": "Matthew Knox",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/concierge/Concierge/issues"
-  },
-  "homepage": "https://github.com/Concierge/Concierge"
+  }
 }
