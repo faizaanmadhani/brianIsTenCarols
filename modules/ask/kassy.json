@@ -1,0 +1,9 @@
+{
+	"name": "ask",
+	"version": 1.0,
+	"startup": "ask.js",
+	"command": "ask",
+	"help": [
+		["{{commandPrefix}}ask", "A basic module example for kassy.json"]
+	]
+}
