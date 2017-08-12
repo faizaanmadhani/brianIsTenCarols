@@ -1,27 +1,46 @@
 {
-  "name": "kassy",
-  "version": "1.0.0",
-  "description": "Things and stuff",
-  "main": "server.js",
+  "name": "brian-is-ten-carols-bot",
+  "version": "4.2.0.6.9",
+  "description": "Your educational friends. ",
+  "main": "main.js",
   "dependencies": {
-    "facebook-chat-api": "^0.2.10",
-    "quarantine": "^0.1.4",
-    "request": "^2.58.0",
-    "streamin": "^0.2.2"
+    "babel-plugin-transform-strict-mode": "^6.3.13",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-env": "^1.5.1",
+    "babel-register": "^6.3.13",
+    "babylon": "^6.8.0",
+    "basic-auth": "^1.1.0",
+    "cline": "^0.8.2",
+    "coffee-script": "^1.10.0",
+    "colors": "^1.1.2",
+    "express": "^4.15.4",
+    "figlet": "^1.1.1",
+    "fs-extra": "^4.0.1",
+    "redwrap": "0.0.4",
+    "request": "^2.81.0",
+    "sanitize-filename": "^1.6.1",
+    "scoped-http-client": "^0.11.0",
+    "sha512": "0.0.1",
+    "socket.io": "^2.0.3",
+    "tmp": "0.0.31",
+    "winston": "^2.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "mocha": "^3.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "grunt test",
+    "start": "node main.js",
+    "debug": "node main.js --debug --timestamp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrkno/Kassy.git"
+  "engines": {
+    "node": "8.0.0"
   },
-  "author": "Matthew Knox",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mrkno/Kassy/issues"
-  },
-  "homepage": "https://github.com/mrkno/Kassy#readme"
+  "bin": {
+    "concierge": "./main.js"
+  }
 }
