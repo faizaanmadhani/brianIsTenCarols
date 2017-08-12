@@ -1,4 +1,6 @@
 var fs = require('fs');
+var count;
+var something;
 // var request = require('request');
 // var i = 0;
 // var indexes = {};
@@ -28,9 +30,13 @@ exports.run = function(api, event) {
       fs.appendFile('./' + event.sender_id + '.json', jsonData, function (err) {
         if (err) throw err;
       });
+      //count = fs.readFile('./' + event.sender_id + '.cnt.json');
+      //count.parseInt;
+      //fs.writeFile('./' + event.sender_id + '.cnt.json', count + 1, 'utf8');
     }
     else {
-      fs.writeFile('./' + event.thread_id + '.json', jsonData, 'utf8');
+      fs.writeFile('./' + event.sender_id + '.json', jsonData);
+      fs.writeFile('./' + event.sender_id + '_cnt.txt', '1');
     }
 
     api.sendMessage("Saved! We'll be asking this soon!", event.thread_id);

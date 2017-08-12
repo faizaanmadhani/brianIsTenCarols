@@ -7,10 +7,13 @@ exports.run = function(api, event) {
   if (typeof array === array){
     weight = min(1, max(0, array[1]));
   }
-  if (Math.random() <= weight){
+  
+  if (Math.random() <= weight && fs.existsSync('./' + event.sender_id + '_cnt.txt')){
     //read from personal database 
     
+    api.sendMessage(fs.readFile('./' + event.sender_id + '_cnt.txt'), event.thread_id);
   } else {
+    //get trivia DB question 
     request.get('https://opentdb.com/api.php?amount=1', (err, response, body) => {
         body = JSON.parse(body);
         fs.writeFile("modules/trivia/answers.txt", body.results[0].correct_answer, function(err) {
