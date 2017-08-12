@@ -2,7 +2,7 @@ var request = require('request');
 var fs = require('fs');
 function get_type(S){
 	if (S.toLowerCase() === "any category") return "";
-  var types = ["", "", "", "", "", "", "", "", "", "General Knowledge", "EBooks", "Film", "Music", "Musicals & Theatres", "Television", "Video Games", "Board Games", "Science & Nature", "Computers", "Mathematics", "Mythology", "Sports", "Geography", "History", "Politics", "Art", "Celebrities", "Animals", "Vehicles", "Comics", "Gadgets", "Japanese Anime & Manga", "Cartoon & Animations"];
+  var types = ["", "", "", "", "", "", "", "", "", "General Knowledge", "Books", "Film", "Music", "Musicals & Theatres", "Television", "Video Games", "Board Games", "Science & Nature", "Computers", "Mathematics", "Mythology", "Sports", "Geography", "History", "Politics", "Art", "Celebrities", "Animals", "Vehicles", "Comics", "Gadgets", "Japanese Anime & Manga", "Cartoon & Animations"];
 	for (var l = 0; l < 33; ++l){
 		if (S.toLowerCase() == types[l].toLowerCase()){
 			return l;
